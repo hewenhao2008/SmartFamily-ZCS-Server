@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>EchoIot Smart House</title>
+    <meta charset="utf-8"/>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">        
+  <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+  <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <div class="logo"><h1>EchoIot Smart House</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+      </div>   
+    </div>
+    <div class="template-page-wrapper">
+	<!-- 左边框 -->
+      <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+          <li>
+            <form class="navbar-form">
+              <input type="text" class="form-control" id="templatemo_search_box" placeholder="搜索...">
+              <span class="btn btn-default">GO</span>
+            </form>
+          </li>
+          <li class="active"><a href="index.php"><i class="fa fa-home"></i>基本信息</a></li>
+          <li><a href="#"><i class="fa fa-cubes"></i><span class="badge pull-right"></span>开关控制</a></li>
+          <li><a href="security.php"><i class="fa fa-map-marker"></i><span class="badge pull-right"></span>安全控件</a></li>
+          <li><a href="lights.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>灯光控制</a></li>
+          <li><a href="#"><i class="fa fa-cog"></i>服务支持</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>登  出</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.php">主页</a></li>
+            <li><a href="#">开关控制</a></li>   
+          </ol>
+          <h1>开关控制</h1>
+          <p>您在此页进行开关功能的相应控制。</p> 
+		  
+          <div class="templatemo-charts">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-info">
+                  <div class="panel-heading">开关控制</div>
+                </div>                 
+              </div>
+            </div>
+          <!-- 在此处添加代码-->
+<!-- -->
+		<form action="http://wcc.hxlxz.com/set.php" method="post">
+			<div class="alert alert-info alert-dismissible">
+                    <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      插座A：<strong></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input type="radio" name="set" value="1" checked="" >开&nbsp&nbsp&nbsp&nbsp
+					<input type="radio" name="set" value="0" >关&nbsp&nbsp&nbsp&nbsp
+						<input type="hidden" name="name" value="C.S1">
+						<input type="hidden" name="password" value="123456">
+					<input type="submit" value="确定" class="btn btn-default">
+			</div><div></div>
+		</form>
+		
+		<form action="http://wcc.hxlxz.com/set.php" method="post">
+			<div class="alert alert-info alert-dismissible">
+                    <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      插座B：<strong></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input type="radio" name="set" value="1" checked="" >开&nbsp&nbsp&nbsp&nbsp
+					<input type="radio" name="set" value="0" >关&nbsp&nbsp&nbsp&nbsp
+						<input type="hidden" name="name" value="C.S1">
+						<input type="hidden" name="password" value="123456">
+					<input type="submit" value="确定" class="btn btn-default">
+			</div><div></div>
+		</form>
+		
+		<form action="http://wcc.hxlxz.com/set.php" method="post">
+			<div class="alert alert-info alert-dismissible">
+                    <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      窗户1：<strong></strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+					<input type="radio" name="set" value="1" checked="" >开&nbsp&nbsp&nbsp&nbsp
+					<input type="radio" name="set" value="0" >关&nbsp&nbsp&nbsp&nbsp
+						<input type="hidden" name="name" value="C.S1">
+						<input type="hidden" name="password" value="123456">
+					<input type="submit" value="确定" class="btn btn-default">
+			</div><div></div>
+		</form>
+		
+	
+		  
+		  
+		  
+		  
+		  
+          </div>
+        </div>
+      </div>    
+
+<!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">您确定登出？</h4>
+            </div>
+            <div class="modal-footer">
+              <a href="sign-in.html" class="btn btn-primary">是</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+          <p>Powered By <a href="www.echoiot.com">EchoIoT</a> Technology CopyRight 2013-2016, <a href="www.echoiot.com">ECHOIOT.COM</a>, Inc.All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+    <script type="text/javascript">
+      // Line chart
+      var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+      var lineChartData = {
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+        {
+          label: "My First dataset",
+          fillColor : "rgba(220,220,220,0.2)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          pointHighlightFill : "#fff",
+          pointHighlightStroke : "rgba(220,220,220,1)",
+          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        },
+        {
+          label: "My Second dataset",
+          fillColor : "rgba(151,187,205,0.2)",
+          strokeColor : "rgba(151,187,205,1)",
+          pointColor : "rgba(151,187,205,1)",
+          pointStrokeColor : "#fff",
+          pointHighlightFill : "#fff",
+          pointHighlightStroke : "rgba(151,187,205,1)",
+          data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+        }
+        ]
+
+      } // lineChartData
+
+      var pieChartData = [
+      {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+      },
+      {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+      },
+      {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+      }
+      ] // pie chart data
+
+      // radar chart
+      var radarChartData = {
+        labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+        datasets: [
+        {
+          label: "My First dataset",
+          fillColor: "rgba(220,220,220,0.2)",
+          strokeColor: "rgba(220,220,220,1)",
+          pointColor: "rgba(220,220,220,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: [65, 59, 90, 81, 56, 55, 40]
+        },
+        {
+          label: "My Second dataset",
+          fillColor: "rgba(151,187,205,0.2)",
+          strokeColor: "rgba(151,187,205,1)",
+          pointColor: "rgba(151,187,205,1)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          data: [28, 48, 40, 19, 96, 27, 100]
+        }
+        ]
+      }; // radar chart
+
+      // polar area chart
+      var polarAreaChartData = [
+      {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+      },
+      {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+      },
+      {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+      },
+      {
+        value: 40,
+        color: "#949FB1",
+        highlight: "#A8B3C5",
+        label: "Grey"
+      },
+      {
+        value: 120,
+        color: "#4D5360",
+        highlight: "#616774",
+        label: "Dark Grey"
+      }
+
+      ];
+
+      window.onload = function(){
+        var ctx_line = document.getElementById("templatemo-line-chart").getContext("2d");
+        var ctx_bar = document.getElementById("templatemo-bar-chart").getContext("2d");
+        var ctx_pie = document.getElementById("templatemo-pie-chart").getContext("2d");
+        var ctx_doughnut = document.getElementById("templatemo-doughnut-chart").getContext("2d");
+        var ctxRadar = document.getElementById("templatemo-radar-chart").getContext("2d");
+        var ctxPolar = document.getElementById("templatemo-polar-chart").getContext("2d");
+
+        window.myLine = new Chart(ctx_line).Line(lineChartData, {
+          responsive: true
+        });
+        window.myBar = new Chart(ctx_bar).Bar(lineChartData, {
+          responsive: true
+        });
+        window.myPieChart = new Chart(ctx_pie).Pie(pieChartData,{
+          responsive: true
+        });
+        window.myDoughnutChart = new Chart(ctx_doughnut).Doughnut(pieChartData,{
+          responsive: true
+        });
+        var myRadarChart = new Chart(ctxRadar).Radar(radarChartData, {
+          responsive: true
+        });
+        var myPolarAreaChart = new Chart(ctxPolar).PolarArea(polarAreaChartData, {
+          responsive: true
+        });
+      }
+    </script>
+  </body>
+</html>

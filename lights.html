@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>EchoIot Smart House</title>
+    <meta charset="utf-8"/>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">        
+  <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+  <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <div class="logo"><h1>EchoIot Smart House</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+      </div>   
+    </div>
+    <div class="template-page-wrapper">
+	<!-- 左边框 -->
+      <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+          <li>
+            <form class="navbar-form">
+              <input type="text" class="form-control" id="templatemo_search_box" placeholder="搜索...">
+              <span class="btn btn-default">GO</span>
+            </form>
+          </li>
+          <li class="active"><a href="index.php"><i class="fa fa-home"></i>基本信息</a></li>
+          <li><a href="button-control.html"><i class="fa fa-cubes"></i><span class="badge pull-right"></span>开关控制</a></li>
+          <li><a href="security.php"><i class="fa fa-map-marker"></i><span class="badge pull-right"></span>安全控件</a></li>
+          <li><a href="#"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>灯光控制</a></li>
+          <li><a href="#"><i class="fa fa-cog"></i>服务支持</a></li>
+          <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>登  出</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.php">主页</a></li>
+            <li><a href="#">灯光控制</a></li>   
+          </ol>
+          <h1>灯光控制</h1>
+          <p>关于室内照明设备信息将会在此页显示，您在此页进行相应控制。</p> 
+			<form action="http://wcc.hxlxz.com/set.php" method="post">
+			<div class="alert alert-info alert-dismissible">
+                      <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      客厅灯亮度：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<div class="btn-group">
+                          <select name = "set" class="btn btn-info" size = "1">
+                            <option value="1">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3" selected>3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							</select>                
+            </div>&nbsp&nbsp&nbsp&nbsp
+			<input type="hidden" name="name" value="L.V">
+			<input type="hidden" name="password" value="123456">
+			<input type="submit" value="确定" class="btn btn-default"></div><div></div></form>
+<!-- -->			
+			<div class="alert alert-info alert-dismissible">
+                      <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      卧室灯亮度：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<div class="btn-group">
+                          <select name = "set" class="btn btn-info" size = "1">
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							</select>                
+            </div>&nbsp&nbsp&nbsp&nbsp
+			<input type="hidden" name="name" value="L.V">
+			<input type="hidden" name="password" value="123456">
+			<input type="submit" value="确定" class="btn btn-default"></div><div></div>
+<!-- -->
+			<div class="alert alert-info alert-dismissible">
+                      <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      厨房灯亮度：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<div class="btn-group">
+                          <select name = "set" class="btn btn-info" size = "1">
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							</select>                
+            </div>&nbsp&nbsp&nbsp&nbsp
+			<input type="hidden" name="name" value="L.V">
+			<input type="hidden" name="password" value="123456">
+			<input type="submit" value="确定" class="btn btn-default"></div><div></div>
+<!-- -->
+			<div class="alert alert-info alert-dismissible">
+                      <p type="text"><span aria-hidden="true"></span><span class="sr-only"></span></p>
+                      走廊灯亮度：&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<div class="btn-group">
+                          <select name = "set" class="btn btn-info" size = "1">
+							<option value="1" selected>1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							</select>                
+            </div>&nbsp&nbsp&nbsp&nbsp
+			<input type="hidden" name="name" value="L.V">
+			<input type="hidden" name="password" value="123456">
+			<input type="submit" value="确定" class="btn btn-default"></div><div></div>
+
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">您确定登出？</h4>
+            </div>
+            <div class="modal-footer">
+              <a href="sign-in.html" class="btn btn-primary">是</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+            <p>Powered By <a href="www.echoiot.com">EchoIoT</a> Technology CopyRight 2013-2016, <a href="www.echoiot.com">ECHOIOT.COM</a>, Inc.All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+  </body>
+</html>
