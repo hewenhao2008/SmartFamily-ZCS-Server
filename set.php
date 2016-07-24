@@ -20,8 +20,8 @@ require 'database.php';
 
 $sql = "update setting set value = '$_REQUEST[set]' where name = '$_REQUEST[name]'";
 
-mysql_query($sql);
+$mysqli->query($sql);
 
-mysql_close($con);
+$mysqli->close();
 exit("请求已提交。");  
 ?>

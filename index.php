@@ -13,16 +13,16 @@ require 'config.php';
 require 'database.php';
 
 $sql = "SELECT * FROM inf where name = 'C.U'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $C_U = $row['value'];
     //echo '市电电压：'.$value.'V<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'C.I'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -32,8 +32,8 @@ if($row != "")
     //echo '电器A电流：'.$temp[0].'A；电器B电流：'.$temp[1].'A<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'C.P'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -43,8 +43,8 @@ if($row != "")
     $C_P2 = $temp[1];
 }
 $sql = "SELECT * FROM inf where name = 'C.W'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -54,8 +54,8 @@ if($row != "")
     //echo '电器A耗电：'.$temp[0].'度；电器B耗电：'.$temp[1].'度<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'S.T'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -65,8 +65,8 @@ if($row != "")
     //echo '当前温度：'.$temp[0].'摄氏度；相对湿度：'.$temp[1].'%<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'S.G'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -79,8 +79,8 @@ if($row != "")
     $S_G = $str;
 }
 $sql = "SELECT * FROM inf where name = 'S.R'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -93,8 +93,8 @@ if($row != "")
     $S_R = $str;
 }
 $sql = "SELECT * FROM inf where name = 'W.Inf'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -107,8 +107,8 @@ if($row != "")
     $W = $str;
 }
 $sql = "SELECT * FROM inf where name = 'D.Inf'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -121,8 +121,8 @@ if($row != "")
     $D = $str;
 }
 $sql = "SELECT * FROM inf where name = 'C.S'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -156,8 +156,8 @@ if($row != "")
     //echo '当前插座A状态：'.$str.'；当前插座B状态：'.$str1.'<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'L.V'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -167,18 +167,18 @@ if($row != "")
 
 
 $sql = "SELECT * FROM setting where name = 'C.S1'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 $set0 = $row['value'];
 
 $sql = "SELECT * FROM setting where name = 'C.S2'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 $set1 = $row['value'];
 
 $sql = "SELECT * FROM setting where name = 'L.V'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 $set2 = $row['value'];
 if(strcmp($set1, '0') == 0)
     $set1 = "断开";
@@ -194,7 +194,7 @@ else $set0 = "错误";
 $ConfS1 = $set0;
 $ConfS2 = $set1;
 $ConfL = $set2;
-mysql_close($con);
+$mysqli->close();
 ?>
 <html>
 <head>

@@ -13,16 +13,16 @@ if($_REQUEST['password'] != $AdminPass)
 require 'database.php';
 
 $sql = "SELECT * FROM inf where name = 'C.U'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
     echo '市电电压：'.$value.'V<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'C.I'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -30,8 +30,8 @@ if($row != "")
     echo '电器A电流：'.$temp[0].'A；电器B电流：'.$temp[1].'A<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'C.P'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -39,8 +39,8 @@ if($row != "")
     echo '电器A功率：'.$temp[0].'W；电器B功率：'.$temp[1].'W<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'C.W'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -48,8 +48,8 @@ if($row != "")
     echo '电器A耗电：'.$temp[0].'度；电器B耗电：'.$temp[1].'度<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'S.T'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -57,8 +57,8 @@ if($row != "")
     echo '当前温度：'.$temp[0].'摄氏度；相对湿度：'.$temp[1].'%<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'S.G'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -70,8 +70,8 @@ if($row != "")
     echo '可燃气体传感器状态：'.$str.'<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'S.R'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -83,8 +83,8 @@ if($row != "")
     echo '人体传感器状态：'.$str.'<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'W.Inf'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -96,8 +96,8 @@ if($row != "")
     echo '雨水传感器状态：'.$str.'<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'D.Inf'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -109,8 +109,8 @@ if($row != "")
     echo '门窗未关传感器状态：'.$str.'<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'C.S'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -142,8 +142,8 @@ if($row != "")
     echo '当前插座A状态：'.$str.'；当前插座B状态：'.$str1.'<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'L.V'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -152,18 +152,18 @@ if($row != "")
 
 
 $sql = "SELECT * FROM setting where name = 'C.S1'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 $set0 = $row['value'];
 
 $sql = "SELECT * FROM setting where name = 'C.S2'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 $set1 = $row['value'];
 
 $sql = "SELECT * FROM setting where name = 'L.V'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 $set2 = $row['value'];
 if(strcmp($set1, '0') == 0)
     $set1 = "断开";
@@ -176,5 +176,5 @@ else if(strcmp($set0, '1') == 0)
     $set0 = "接通";   
 else $set0 = "错误";  
 echo '当前系统配置为：插座A'.$set0.'，插座B'.$set1.'，灯光亮度'.$set2.'。<br/>'; 
-mysql_close($con);
+$mysqli->close();
 ?>

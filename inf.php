@@ -12,15 +12,15 @@ if($_REQUEST['password'] != $AdminPass)
 require 'database.php';
 
 $sql = "SELECT * FROM inf where name = '$_REQUEST[name]'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 
 if($row == "")
     $sql = "INSERT INTO inf (name, value) VALUES ('$_REQUEST[name]', '$_REQUEST[value]')";
 else
     $sql = "update inf set value = '$_REQUEST[value]' where name = '$_REQUEST[name]'";
-mysql_query($sql);
+$mysqli->query($sql);
 
-mysql_close($con);
+$mysqli->close();
 exit("ok");  
 ?>

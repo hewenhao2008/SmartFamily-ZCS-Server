@@ -12,8 +12,8 @@ require 'config.php';
 require 'database.php';
 
 $sql = "SELECT * FROM inf where name = 'S.T'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -23,8 +23,8 @@ if($row != "")
     //echo '当前温度：'.$temp[0].'摄氏度；相对湿度：'.$temp[1].'%<br/>'; 
 }
 $sql = "SELECT * FROM inf where name = 'S.G'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -37,8 +37,8 @@ if($row != "")
     $S_G = $str;
 }
 $sql = "SELECT * FROM inf where name = 'S.R'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -51,8 +51,8 @@ if($row != "")
     $S_R = $str;
 }
 $sql = "SELECT * FROM inf where name = 'W.Inf'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -65,8 +65,8 @@ if($row != "")
     $W = $str;
 }
 $sql = "SELECT * FROM inf where name = 'D.Inf'";
-$result = mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result = $mysqli->query($sql);
+$row = mysqli_fetch_array($result);
 if($row != "")
 {
     $value = $row['value'];
@@ -78,7 +78,7 @@ if($row != "")
     //echo '门窗未关传感器状态：'.$str.'<br/>'; 
     $D = $str;
 }
-mysql_close($con);
+$mysqli->close();
 ?>
 <!DOCTYPE html>
 <head>

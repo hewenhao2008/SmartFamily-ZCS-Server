@@ -1,7 +1,6 @@
 <?php
-$con = mysql_connect(DBServer, DBUser, DBPassword);
-if (!$con)
-    die('Could not connect: ' . mysql_error());
-mysql_select_db(DBName, $con);
-mysql_query("set character set 'utf8'");
+$mysqli = mysqli_connect(DBServer, DBUser, DBPassword, DBName);
+if (!$mysqli)
+    die('Could not connect: ' . $mysqli->error);
+$mysqli->query("set character set 'utf8'");
 ?>
